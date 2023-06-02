@@ -61,6 +61,8 @@ git submodule update --init --recursive
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+**Don't forget to change your network interface in the polybar config file (default `~/.config/polybar/hack/config.ini`)**
+
 ### Folders
 
 To get the folders color, run this command
@@ -77,7 +79,7 @@ To use the lightDM background from the theme, create the following directory if 
 sudo cp ~/.config/wallpaper.jpg /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.jpg
 ```
 
-Now, you can change the background in the login screen settings
+**Now, you can change the background in the login screen settings**
 
 ### ZSH
 
