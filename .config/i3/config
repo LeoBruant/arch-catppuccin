@@ -36,7 +36,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # start rofi
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
 
 # change focus
 bindsym $mod+Left focus left
