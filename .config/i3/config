@@ -195,9 +195,9 @@ exec_always --no-startup-id dunst &
 # Settings for I3 gaps
 
 for_window [all] border pixel 0
-gaps inner 28
+gaps inner 21
 gaps outer 0
-gaps bottom 41
-gaps top 41
-gaps left -21
-gaps right -21
+gaps bottom 48
+gaps top 48
+gaps left -14
+gaps right -14
