@@ -77,11 +77,14 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# lock screen
+bindsym $mod+l exec betterlockscreen -l blur
+
 # shutdown
 bindsym $mod+Escape exec shutdown now
 
-# lock screen
-bindsym $mod+l exec betterlockscreen -l blur
+# reboot
+bindsym $mod+r exec reboot
 
 # take a screenshot
 bindsym $mod+s exec flameshot gui
