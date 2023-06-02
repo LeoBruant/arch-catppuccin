@@ -9,7 +9,7 @@ It will not fully work in other environments.
 
 ## Features
 
-- Bar : [polybar](https://polybar.github.io/) - Theme based on [adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes) (Hack theme)
+- Bar : [polybar](https://polybar.github.io/) - Using [adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes) with a modified version of the "Hack" theme
 - Compositor : [picom](https://github.com/yshui/picom)
 - Cursor icons : [layan-cursor-theme-git](https://github.com/vinceliuice/Layan-cursors)
 - Display manager : [lightdm](https://github.com/canonical/lightdm)
@@ -73,7 +73,7 @@ papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 
 ### LightDM
 
-To use the lightDM background from the theme, create the following directory if you don't have it already : `/usr/share/backgrounds/archlinux-login-backgrounds` and then run this command
+To use the lightDM background from the theme, create the following directory if you didn't already : `/usr/share/backgrounds/archlinux-login-backgrounds` and then run this command
 
 ```bash
 sudo cp ~/.config/wallpaper.jpg /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.jpg
