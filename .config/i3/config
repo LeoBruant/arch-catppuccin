@@ -187,7 +187,7 @@ exec --no-startup-id discord
 exec --no-startup-id feh --bg-fill ~/.config/wallpaper.jpg &
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/launch.sh --hack &
 
 # Picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf &
