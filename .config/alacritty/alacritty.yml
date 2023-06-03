@@ -49,7 +49,7 @@ colors:
     blue: "#89B4FA" # blue
     magenta: "#F5C2E7" # pink
     cyan: "#94E2D5" # teal
-    white: "#CDD6F4"  
+    white: "#CDD6F4"
 
   # Bright colors
   bright:
@@ -87,3 +87,7 @@ font:
   normal:
     family: "MesloLGS NF"
     style: Regular
+
+cursor:
+  style:
+    shape: Beam
