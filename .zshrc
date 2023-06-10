@@ -23,6 +23,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+
 # Aliases
 
 # General
@@ -35,8 +37,6 @@ alias rem="sudo pacman -R --noconfirm"
 alias u="sudo pacman -Syyu --noconfirm && yay -Syyu --noconfirm"
 alias iy="yay -S --noconfirm"
 alias ry="yay -R --noconfirm"
-
-source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
