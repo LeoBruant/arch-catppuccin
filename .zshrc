@@ -1,3 +1,4 @@
+eval "$(ssh-agent -s)"
 nitch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
