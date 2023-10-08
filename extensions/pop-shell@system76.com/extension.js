@@ -32,7 +32,7 @@ const Movement = movement.Movement;
 const GLib = imports.gi.GLib;
 const { Gio, Meta, St, Shell } = imports.gi;
 const { GlobalEvent, WindowEvent } = Events;
-const { cursor_rect, is_move_op } = Lib;
+const { cursor_rect, is_keyboard_op, is_resize_op, is_move_op } = Lib;
 const Main = imports.ui.main;
 const { layoutManager, loadTheme, overview, panel, setThemeStylesheet, screenShield, sessionMode, windowAttentionHandler } = Main;
 const { ScreenShield } = imports.ui.screenShield;
@@ -1086,7 +1086,7 @@ var Ext = class Ext extends Ecs.System {
                 this.unset_grab_op();
                 this.grab_op = new GrabOp.GrabOp(entity, rect);
                 this.size_signals_block(win);
-                if (overview.visible || !win || op !== 1)
+                if (overview.visible || !win || is_keyboard_op(op) || is_resize_op(op))
                     return;
                 const workspace = this.active_workspace();
                 this.drag_signal = GLib.timeout_add(GLib.PRIORITY_LOW, 200, () => {

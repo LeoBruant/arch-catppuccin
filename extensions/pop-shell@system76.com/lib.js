@@ -56,12 +56,16 @@ function join(iterator, next_func, between_func) {
         }
     });
 }
+function is_keyboard_op(op) {
+    const window_flag_keyboard = Meta.GrabOp.KEYBOARD_MOVING & ~Meta.GrabOp.WINDOW_BASE;
+    return (op & window_flag_keyboard) != 0;
+}
+function is_resize_op(op) {
+    const window_dir_mask = (Meta.GrabOp.RESIZING_N | Meta.GrabOp.RESIZING_E | Meta.GrabOp.RESIZING_S | Meta.GrabOp.RESIZING_W) & ~Meta.GrabOp.WINDOW_BASE;
+    return (op & window_dir_mask) != 0 || (op & Meta.GrabOp.KEYBOARD_RESIZING_UNKNOWN) == Meta.GrabOp.KEYBOARD_RESIZING_UNKNOWN;
+}
 function is_move_op(op) {
-    return [
-        Meta.GrabOp.WINDOW_BASE,
-        Meta.GrabOp.MOVING,
-        Meta.GrabOp.KEYBOARD_MOVING
-    ].indexOf(op) > -1;
+    return !is_resize_op(op);
 }
 function orientation_as_str(value) {
     return value == 0 ? "Orientation::Horizontal" : "Orientation::Vertical";
