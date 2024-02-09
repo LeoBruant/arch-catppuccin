@@ -1,4 +1,3 @@
-eval "$(ssh-agent -s)"
 nitch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -30,7 +29,6 @@ source $ZSH/oh-my-zsh.sh
 
 # General
 alias l="lsd -A"
-alias stop='docker stop $(docker ps -a -q)'
 
 # Packages
 alias get="sudo pacman -S --noconfirm"
